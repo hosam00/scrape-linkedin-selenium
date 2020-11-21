@@ -32,11 +32,11 @@ class Profile(ResultsObject):
         image_url = ''
         # If this is not None, you were scraping your own profile.
         image_element = one_or_default(
-            top_card, 'img.profile-photo-edit__preview')
+            top_card, 'img.pv-top-card__photo')
 
         if not image_element:
             image_element = one_or_default(
-                top_card, 'img.pv-top-card__photo')
+                top_card, 'img.profile-photo-edit__preview')
 
         # Set image url to the src of the image html tag, if it exists
         try:
