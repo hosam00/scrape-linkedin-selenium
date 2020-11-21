@@ -21,8 +21,8 @@ class Profile(ResultsObject):
         personal_info = get_info(top_card, {
             'name': '.pv-top-card--list > li',
             'headline': '.flex-1.mr5 h2',
-            'company': 'li[data-control-name="position_see_more"]',
-            'school': 'li[data-control-name="education_see_more"]',
+            'company': 'ul[class="pv-top-card--experience-list"] li:nth-child(1) span',
+            'school': 'ul[class="pv-top-card--experience-list"] li:nth-child(2) span',
             'location': '.pv-top-card--list-bullet > li',
         })
 
