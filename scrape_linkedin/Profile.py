@@ -47,7 +47,7 @@ class Profile(ResultsObject):
         personal_info['image'] = image_url
 
         followers_text = text_or_default(self.soup,
-                                         '.pv-recent-activity-section__follower-count', '')
+                                         'section.pv-recent-activity-section-v2 span.align-self-center', '')
         personal_info['followers'] = followers_text.replace(
             'followers', '').strip()
 
